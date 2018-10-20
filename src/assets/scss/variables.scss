@@ -1,0 +1,50 @@
+// colors
+$color-brand-primary: #3866df;
+$white: #ffffff;
+$grey: #a4adb7;
+$light-grayish-blue: #ebebee;
+$light-blue:#ecf1f6;
+$red:#e3334c;
+$light-red: #ff435c;
+$black: #404553;
+$dark-grayish-blue: #2b3337;
+$ivory: #faf9ee;
+$san-marino: #a6bcd0;
+$lime-green: #18c555;
+$btn-text-color: $white;
+$btn-bg-color: $color-brand-primary;
+$btn-disabled-text-color: #e8effe;
+$btn-box-shadow-color: #77777729;
+$btn-grey-bg-color: #fefefe;
+$btn-grey-box-shadow-color: #00000012;
+$btn-grey-text-color: #9eb1c2;
+$btn-danger-text-color: $red;
+$label-text-color: #9eb1c2;
+$body-text-color: #435056;;
+$body-text-grey: #6b7d86;
+$error-color:$red;
+$placeholder-color:#c2cbd3;
+$search-text-color:#606571;
+$status-in-progress-color:#f5a623;
+$status-completed-color:#09c24b;
+$status-cancelled-color:#e3334c;
+$status-booked-color:#316ffc;
+$page-background: #fafafa;
+$divider-color: #f3f3f3;
+$selected-item-color: #fffff8;
+$item-separaor-color: #e8effe;
+$separator-color: $light-blue;
+// paths and urls
+$assetsBaseUrl:'/assets/';
+$fontPath:'/assets/fonts/';
+$proximaFontPath:$fontPath+'proxima/';
+//fonts
+$font-family-regular: 'proxima-regular';
+$font-family-bold: 'proxima-bold';
+$font-family-semibold: 'proxima-semibold';
+//dimens
+// $header-height: 110px;
+$header-height: 166px;
+$header-height-with-subtitle: 174px;
+$header-responsive-height: 95px;
+$header-responsive-height-with-subtitle: 129px;

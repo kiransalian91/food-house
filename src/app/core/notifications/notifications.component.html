@@ -1,0 +1,13 @@
+<div class="master-detail-container">
+  <ul class="notifications-list">
+    <li role="menuitem" class="notification-item" *ngFor="let notification of notificationsList" [ngClass]="{'unread-item': notification.new}">
+      <div class="group-items">
+        <span class="new" [hidden]="!notification.new"></span>
+        <div class="id">{{notification.id}}</div>
+        <div class="notification-text" [innerHTML]="notification.text"></div>
+      </div>
+      <div class="time"> {{checkToday(notification.time) ? 'Today, ' + (notification.time | date:'h:mm') : (notification.time | date:'MMMM dd yyyy - h:mm') }} <span class="time-am-pm">{{notification.time | date:'a'}}</span> </div>
+      <div class="clearfix"></div>
+    </li>
+  </ul>
+</div>

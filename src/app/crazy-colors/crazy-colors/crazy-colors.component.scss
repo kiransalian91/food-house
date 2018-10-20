@@ -1,0 +1,38 @@
+@import '../../../assets/scss/variables.scss';
+@import "../../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+.agents-container {
+    .list-element {
+        .details {
+            padding: 0px 16px;
+            .name {
+                padding: 0;
+                margin: 0;
+            }
+            .availability {
+                font-family: $font-family-regular;
+                letter-spacing: 0.3px;
+                float: right;
+                padding-top: 2px;
+                font-size: 10px;
+                @include media-breakpoint-up(lg) {
+                    font-size: 12px;
+                }
+            }
+            .available {
+                color: $lime-green;
+            }
+            .unavailable {
+                color: $light-red;
+            }
+        }
+    }
+    .agent-details-container {
+        .overlay {
+            .vertical-align {
+                @include media-breakpoint-down(md) {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

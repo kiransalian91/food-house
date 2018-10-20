@@ -1,0 +1,82 @@
+@import '../../../assets/scss/variables.scss';
+@import "../../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+.notifications-list {
+    width: 100%;
+    @include media-breakpoint-down(md) {
+        margin-top: 44px;
+        box-shadow: 0 5px 6px 0 #c4cbd812;
+    }
+    .notification-item {
+        text-align: left;
+        background-color: #fcfdff;
+        font-family: $font-family-regular;
+        color: $btn-grey-text-color;
+        position: relative;
+        padding: 15px;
+        border-bottom: solid 0.7px $item-separaor-color;
+        box-shadow: none;
+        @include media-breakpoint-up(lg) {
+            box-shadow: 0 1px 0 0 $item-separaor-color, 0 -1px 0 0 $item-separaor-color;
+            border: none;
+            padding: 16px 30px;
+        }
+        .id {
+            font-size: 14px;
+            padding-left: 22px;
+            @include media-breakpoint-down(md) {
+                padding-left: 19px;
+                font-size: 12px;
+            }
+        }
+        .time {
+            font-size: 12px;
+            position: absolute;
+            right: 30px;
+            margin-top: 12px;
+            @include media-breakpoint-down(md) {
+                position: relative;
+                right: 0;
+                padding-left: 19px;
+                margin: 0;
+                font-size: 10px;
+            }
+            .time-am-pm {
+                text-transform: lowercase
+            }
+        }
+        .notification-text {
+            font-size: 14px;
+            color: $body-text-color;
+            padding-left: 22px;
+            @include media-breakpoint-down(md) {
+                padding-left: 19px;
+                font-size: 12px;
+            }
+        }
+        .new {
+            width: 8px;
+            height: 8px;
+            background-color: $body-text-color;
+            border-radius: 50%;
+            float: left;
+            margin-top: 18px;
+        }
+        .group-items {
+            float: left;
+            padding-right: 10px;
+            @include media-breakpoint-down(md) {
+                float: unset;
+                padding-right: 0px;
+            }
+            @include media-breakpoint-up(lg) {
+                margin-right: 170px;
+            }
+        }
+    }
+    .unread-item {
+        background-color: #ffffff;
+    }
+}
+.clearfix {
+    clear: both;
+}

@@ -1,0 +1,228 @@
+<button class="btn btn-filled">btn-filled</button><br><br>
+<button class="btn btn-empty">btn-empty</button><br><br>
+<button class="btn btn-filled" disabled>btn-filled-dis</button>
+<br><br>
+<button class="btn btn-with-plus-icon">
+  Add item
+</button><br><br>
+<button class="btn btn-grey-empty">btn-grey-empty</button><br><br>
+<button class="btn btn-grey-empty" disabled>btn-grey-empty-dis</button><br><br>
+<button class="btn btn-rectangle-filled">test</button>
+<br><br>
+<button class="btn btn-rectangle-filled" disabled>test2</button>
+<br><br>
+<button class="btn btn-rectangle-empty">Change Status</button>
+<br><br>
+<button class="btn btn-rectangle-empty" disabled>Change Status</button>
+<br><br>
+<button class="btn btn-rectangle-empty-danger">Cancel</button>
+<br><br>
+<button class="btn btn-rectangle-grey-empty">No</button>
+<br><br>
+<button class="btn btn-download">Download</button>
+
+search box
+<div class="search-box">
+  <form action="" class="form-group">
+    <label for="search"><img src="../assets/images/shape.png" alt="Search icon"></label>
+    <input type="text" class="form-control" name="search" id="search" placeholder="Search">
+  </form>
+</div>
+
+<br><br>
+<div class="search-box-2">
+  <form action="" class="form-group">
+    <input type="text" class="form-control" name="search" id="search" placeholder="Search">
+    <img src="../assets/images/shape.png" alt="Search icon">
+  </form>
+</div>
+<br><br>
+search box
+<div class="search-box-type-2">
+  <form action="" class="form-group">
+    <input type="text" class="form-control">
+    <button class="btn btn-rectangle-filled"><img src="../assets/images/search-icn-white.png" alt="Search icon"></button>
+  </form>
+</div>
+
+inputs and slider buttons <br><br>
+<br><br><hr>
+
+<label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider round "></span>
+</label>
+<br>
+<label class="switch enable-disable">
+  <input type="checkbox" checked>
+  <span class="slider round "></span>
+</label>
+
+<br>
+
+<label class="sg-custom-control sg-custom-checkbox">test
+  <input type="checkbox"  />
+  <div class="sg-control-indicator"></div>
+</label>
+
+
+<label class="sg-custom-control sg-custom-radio">test123
+  <input name="providerType" type="radio" hello/>
+  <div class="sg-control-indicator"></div>
+</label>
+
+<label class="sg-custom-control sg-custom-radio">test123
+  <input name="providerType" type="radio" hello/>
+  <div class="sg-control-indicator"></div>
+</label>
+
+<label class="sg-custom-control sg-custom-checkbox">test1234
+  <input type="checkbox" hello/>
+  <div class="sg-control-indicator"></div>
+</label>
+
+<br>
+
+new service request list
+<div>
+  <div class="list-element" *ngFor="let service of servicesFinance">
+    <div class="img-container">
+        <div class="icon-container">
+          <img [src]="service.imageUrl" alt="">
+          <span class="highlight-green"></span>
+        </div>
+    </div>
+    <div class="details">
+      <!-- <div class="vendor-name">{{service.name}}</div>
+      <div class="vendor-services">{{service.name}}</div> -->
+
+      
+      <div class="">
+        <div class="detail-item ">
+          <div class="vendor-name">{{service.name}}</div>
+          <div class="vendor-services">{{service.name}}</div>
+        </div>
+        <div class="detail-item inline-item">
+            <div class="location">
+              <img src="../../../assets/images/location.png" alt="">
+              <span>{{service.location}} </span>
+            </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="img-container">
+    <div class="icon-container service-details-icon" [ngClass]="{'current-services': serviceSelected}" >
+      <img [src]="'../../../assets/images/paint-brush.png'" alt="">
+      <!-- <span class="highlight-green"></span> -->
+    </div>
+  </div>
+  <div class="img-container">
+    <div class="icon-container service-details-icon" [ngClass]="{'current-services': serviceSelected1}" >
+      <img [src]="'../../../assets/images/paint-brush.png'" alt="">
+      <!-- <span class="highlight-green"></span> -->
+    </div>
+  </div>
+  in table <br>
+  <div class="img-container">
+    <div class="icon-container table-view-icon" [ngClass]="{'current-services': serviceSelected1}" >
+      <img [src]="'../../../assets/images/paint-brush.png'" alt="">
+      <!-- <span class="highlight-green"></span> -->
+    </div>
+  </div>
+</div>
+
+<br><br>
+
+Rating
+<br><br>
+<input type="text" [(ngModel)]="rating" (change)="saverange()" >
+{{rating}}
+
+<div class="rating">
+  <form>
+    <input 
+      type="radio" name="star-5" id="star-5" disabled  class="star" 
+      [checked]="rating >= 5" />
+    <label 
+      for="star-5" class="star" ></label>
+    <input 
+      type="radio" name="star-4-half" id="star-4-half" disabled  class="star" 
+      [checked]="rating >= 4.5" />
+    <label 
+      for="star-4-half"
+      class="star half" ></label>
+
+    <input 
+      type="radio" name="star-4" id="star-4" disabled class="star"  
+      [checked]="rating >= 4" />
+    <label 
+      for="star-4" class="star" ></label>
+    <input 
+      type="radio" name="star-3-half" id="star-3-half" disabled  class="star" 
+      [checked]="rating >= 3.5" />
+    <label 
+      for="star-3-half"
+      class="star half" ></label>
+
+    <input 
+      id="star-3" type="radio" name="star-3" disabled class="star" 
+      [checked]="rating >= 3" />
+    <label  class="star" for="star-3"></label>
+
+    <input 
+      type="radio" name="star-2-half" id="star-2-half" disabled  class="star" 
+      [checked]="rating >= 2.5" />
+    <label 
+      for="star-2-half"
+      class="star half" ></label>
+    
+    <input 
+      type="radio" name="star-2" id="star-2" disabled  class="star" 
+      [checked]="rating >= 2" />
+    <label 
+      for="star-2" class="star" ></label>
+
+    <input 
+      type="radio" name="star-1-half" id="star-1-half" disabled  class="star" 
+      [checked]="rating >= 1.5" />
+    <label 
+      for="star-1-half"
+      class="star half" ></label>
+
+    <input 
+      type="radio" name="star-1" id="star-1" disabled  class="star" 
+      [checked]="rating >= 1" />
+    <label 
+      for="star-1" class="star" ></label>
+    
+  </form>
+</div>
+
+<div class="rating-container">
+  <div class="avg-rating">4.3</div>
+  <div class="stars">
+    <img [src]="rating >= 1 ? '../assets/images/star.png' : '../assets/images/star-grey.png'" alt="raring">
+    <img [src]="rating >= 2 ? '../assets/images/star.png' : '../assets/images/star-grey.png'" alt="raring">
+    <img [src]="rating >= 3 ? '../assets/images/star.png' : '../assets/images/star-grey.png'" alt="raring">
+    <img [src]="rating >= 4 ? '../assets/images/star.png' : '../assets/images/star-grey.png'" alt="raring">
+    <img [src]="rating == 5 ? '../assets/images/star.png' : '../assets/images/star-grey.png'" alt="raring">
+  </div>
+  <div class="rating-count">(343)</div>
+</div>
+
+Pop up
+<button class="btn btn-filled" (click)="showPopup()" >Open pop up</button><br><br>
+<div class="overlay" *ngIf="showPopUp">
+  <div class="vertical-align">
+    <div class="vertical-center">
+      <div class="popup-body">
+        <div class="title">Service Provider Added.</div>
+        popup works!
+        <button class="btn btn-filled" (click)="hidePopup()" >Hide pop up</button><br><br>
+      </div>
+    </div>
+  </div>
+</div>
+  

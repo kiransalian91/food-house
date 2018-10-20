@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'proxima-bold';
+    src: url($proximaFontPath+"Proxima-Nova-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'proxima-regular';
+    src: url($proximaFontPath+"Proxima-Nova-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'proxima-semibold';
+    src: url($proximaFontPath+"Proxima-Nova-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url($fontPath+'icomoon.ttf');
+}

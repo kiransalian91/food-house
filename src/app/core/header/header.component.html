@@ -1,0 +1,24 @@
+<div class="navbar-container" [ngClass]="{'with-subtitle': (pageTitle === 'Notifications')}" >
+  <nav class="navbar navbar-expand-lg" [ngClass]="{ 'sidebar-div': navbarOpen }" #sidebarDiv (click)="onClickOutside($event)">
+    <div class="sidebar">
+      <div class="navbar-head">
+        <button class="navbar-toggler navbar-toggle collapsed hamburger-button" type="button" (click)="toggleNavbar()" [ngClass]="{'close-menu': navbarOpen}">
+          <img class="menu-icon" [src]="menuicon" [hidden]="navbarOpen" alt="">
+          <img class="close-icon" [src]="closeicon" [hidden]="!navbarOpen" alt="">
+        </button>
+        <a class="navbar-brand" href="#">
+          <img [src]="logo" alt="">
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse sidebar" [ngClass]="{ 'show': navbarOpen }">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" *ngFor="let item of navbarItems; let i = index">
+            <a class="nav-link" [ngClass]="{ active: checkActive(item.link)}" (click)="headerTabClick(i)">{{item.name}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</div>
